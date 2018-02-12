@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CPAnimatedPlayingIndicatorView"
-  s.version      = "1.0.1"
+  s.version      = "1.0.2"
   s.summary      = "A customizable playing indicator with animating bars."
   s.description  = "A customizable playing indicator with animating bars. Supports setting bar count, color, spacing, corner radius, animation speed and delay between animation each bar."
   s.homepage     = "https://github.com/canpoyrazoglu/CPAnimatedPlayingIndicatorView"
@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/canpoyrazoglu/CPAnimatedPlayingIndicatorView.git", :tag => s.version.to_s }
 
 
-  s.source_files  = "Classes/**/*.{h,m}"
+  s.source_files = "Classes/**/*.{h,m}"
+  s.framework    = "QuartzCore"
 
 end
