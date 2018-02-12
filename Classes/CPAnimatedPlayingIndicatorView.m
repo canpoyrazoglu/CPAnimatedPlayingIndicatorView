@@ -7,6 +7,7 @@
 //
 
 #import "CPAnimatedPlayingIndicatorView.h"
+@import QuartzCore;
 
 static inline CGPathRef zeroAmplitudeBarPath(CGRect bounds, float barSpacing, float barWidth, float cornerRadius, int index, int total){
     float xPosition = index / (float)total * bounds.size.width //normal position
