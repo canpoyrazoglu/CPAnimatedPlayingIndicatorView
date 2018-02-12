@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "CPAnimatedPlayingIndicatorView"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "A customizable playing indicator with animating bars."
   s.description  = "A customizable playing indicator with animating bars. Supports setting bar count, color, spacing, corner radius, animation speed and delay between animation each bar."
   s.homepage     = "https://github.com/canpoyrazoglu/CPAnimatedPlayingIndicatorView"

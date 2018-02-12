@@ -61,6 +61,7 @@ static inline CGPathRef fullAmplitudeBarPath(CGRect bounds, float barSpacing, fl
         CGPathRef path = zeroAmplitudeBarPath(bounds, _barSpacing, barWidth, _cornerRadius, i, _barCount);
         CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
         shapeLayer.path = path;
+        shapeLayer.fillColor = colorRef;
         [self.layer addSublayer:shapeLayer];
     }
 }
