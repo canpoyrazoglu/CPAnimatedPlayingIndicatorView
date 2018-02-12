@@ -13,6 +13,7 @@
 		366A01542030C6110037D5DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 366A01532030C6110037D5DB /* Assets.xcassets */; };
 		366A01572030C6110037D5DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 366A01552030C6110037D5DB /* LaunchScreen.storyboard */; };
 		366A015A2030C6110037D5DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 366A01592030C6110037D5DB /* main.m */; };
+		366A01642030C6BF0037D5DB /* CPAnimatedPlayingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 366A01632030C6BF0037D5DB /* CPAnimatedPlayingIndicatorView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		366A01562030C6110037D5DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		366A01582030C6110037D5DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		366A01592030C6110037D5DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		366A01622030C6BF0037D5DB /* CPAnimatedPlayingIndicatorView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPAnimatedPlayingIndicatorView.h; sourceTree = "<group>"; };
+		366A01632030C6BF0037D5DB /* CPAnimatedPlayingIndicatorView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPAnimatedPlayingIndicatorView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +45,7 @@
 		366A013E2030C6110037D5DB = {
 			isa = PBXGroup;
 			children = (
+				366A01612030C6AC0037D5DB /* Classes */,
 				366A01492030C6110037D5DB /* CPAnimatedPlayingIndicatorView */,
 				366A01482030C6110037D5DB /* Products */,
 			);
@@ -69,6 +73,15 @@
 				366A01592030C6110037D5DB /* main.m */,
 			);
 			path = CPAnimatedPlayingIndicatorView;
+			sourceTree = "<group>";
+		};
+		366A01612030C6AC0037D5DB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				366A01622030C6BF0037D5DB /* CPAnimatedPlayingIndicatorView.h */,
+				366A01632030C6BF0037D5DB /* CPAnimatedPlayingIndicatorView.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +157,7 @@
 			files = (
 				366A014F2030C6110037D5DB /* ViewController.m in Sources */,
 				366A015A2030C6110037D5DB /* main.m in Sources */,
+				366A01642030C6BF0037D5DB /* CPAnimatedPlayingIndicatorView.m in Sources */,
 				366A014C2030C6110037D5DB /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,23 +7,42 @@
 //
 
 #import "ViewController.h"
+#import "CPAnimatedPlayingIndicatorView.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet CPAnimatedPlayingIndicatorView *indicatorView;
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+- (IBAction)didTapToggleAnimationButton:(id)sender {
+    if(self.indicatorView.isAnimating){
+        [self.indicatorView endAnimating];
+    }else{
+        [self.indicatorView beginAnimating];
+    }
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)didChangeBarCount:(UISlider *)sender {
+    self.indicatorView.barCount = (int)sender.value;
 }
 
+- (IBAction)didChangeSpacing:(UISlider *)sender {
+    self.indicatorView.barSpacing = sender.value;
+}
+
+- (IBAction)didChangeCornerRadius:(UISlider *)sender {
+    self.indicatorView.cornerRadius = sender.value;
+}
+
+- (IBAction)didChangeAnimationSpeed:(UISlider *)sender {
+    self.indicatorView.animationSpeed = sender.value;
+}
+
+- (IBAction)didChangeDivergence:(UISlider *)sender {
+    self.indicatorView.divergence = sender.value;
+}
 
 @end
