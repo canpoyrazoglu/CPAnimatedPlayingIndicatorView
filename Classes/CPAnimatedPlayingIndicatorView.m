@@ -31,7 +31,6 @@ static inline CGPathRef fullAmplitudeBarPath(CGRect bounds, float barSpacing, fl
 }
 
 @implementation CPAnimatedPlayingIndicatorView{
-    CGColorRef colorRef;
     BOOL didAwake;
     int animationStartCounter;
     BOOL animating;
@@ -57,6 +56,7 @@ static inline CGPathRef fullAmplitudeBarPath(CGRect bounds, float barSpacing, fl
 -(void)createLayers{
     CGRect bounds = self.bounds;
     float barWidth = ((bounds.size.width - (_barSpacing * (_barCount - 1))) / _barCount);
+    CGColorRef colorRef = self.color.CGColor;
     for (int i = 0; i < _barCount; i++) {
         CGPathRef path = zeroAmplitudeBarPath(bounds, _barSpacing, barWidth, _cornerRadius, i, _barCount);
         CAShapeLayer *shapeLayer = [[CAShapeLayer alloc] init];
@@ -72,6 +72,11 @@ static inline CGPathRef fullAmplitudeBarPath(CGRect bounds, float barSpacing, fl
     [self performLayout];
 }
 
+-(void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection {
+    [super traitCollectionDidChange:previousTraitCollection];
+    [self invalidateLayers];
+}
+
 -(void)setBarCount:(int)barCount{
     _barCount = barCount;
     [self setNeedsDisplay];
@@ -79,7 +84,6 @@ static inline CGPathRef fullAmplitudeBarPath(CGRect bounds, float barSpacing, fl
 
 -(void)setColor:(UIColor *)color{
     _color = color;
-    colorRef = color.CGColor;
     [self setNeedsDisplay];
 }
 
